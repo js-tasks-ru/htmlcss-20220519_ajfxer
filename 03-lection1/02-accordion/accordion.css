@@ -1,1 +1,58 @@
 /* Стилизация аккордеона */
+
+p {
+    color: var(--grey-4);
+    margin-bottom: 8px;
+}
+
+.accordeon {
+    background: white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: Inter, serif;
+}
+.accordeon_summary {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.accordeon_summary::after {
+    display: inline-block;
+    content: url('../../assets/images/arrow_down.svg');
+    width: 16px;
+    height: 8px;
+    align-self:center;
+    margin-bottom: 15px;
+
+}
+
+.accordeon_summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.accordeon_item {
+    color: #495057;
+    border: 1px solid #ACB5BD;
+    border-radius: 8px;
+    width: 730px;
+    min-height: 72px;
+}
+.accordeon_item:last-child {
+    margin-bottom: 0;
+}
+.accordeon__accordion_item {
+    margin-bottom: 8px;
+    padding: 32px 48px 32px 32px ;
+
+}
+
+.accordeon_item[open] > .accordeon_summary:after {
+    transform: rotate(180deg);
+}
+
